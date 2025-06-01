@@ -21,20 +21,16 @@ public class SumCalculator {
     */
 
     public int sumCalculate(int n) {
-        try {
-            if (n == 0) {
-                throw new IllegalArgumentException("Значення 'n' не може дорівнювати 0");
-            } else if (n < 0) {
-                throw new IllegalArgumentException("Значення 'n' не може дорівнювати " +
-                        "відємному значенню");
-            }
-            int sum = 0;
-            for (int i = 0; i <= n; i++) {
-                sum += i;
-            }
-            return sum;
-        } catch (Exception ex) {
-            throw new IllegalArgumentException("Invalid expression " + ex);
+        if (n == 0) {
+            throw new IllegalArgumentException("Значення 'n' не може дорівнювати 0");
+        } else if (n < 0) {
+            throw new IllegalArgumentException("Значення 'n' не може дорівнювати " +
+                    "відємному значенню");
         }
+        int sum = 0;
+        for (int i = 0; i <= n; i++) {
+            sum += i;
+        }
+        return sum;
     }
 }

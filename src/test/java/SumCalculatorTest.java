@@ -14,14 +14,12 @@ class SumCalculatorTest {
 
     @Test // вызов sum(1) возвращает 1
     public void testSumOne() {
-        Expression expression = new Expression(Expression.Operator.plus, 1);
-        assertEquals(1, sumCalculator.sumCalculate(expression.getSum()));
+        assertEquals(1, sumCalculator.sumCalculate(1));
     }
 
     @Test // вызов sum(3) возвращает 6
     public void testSumThree() {
-        Expression expression = new Expression(Expression.Operator.plus, 3);
-        assertEquals(6, sumCalculator.sumCalculate(expression.getSum()));
+        assertEquals(6, sumCalculator.sumCalculate(3));
     }
 
 

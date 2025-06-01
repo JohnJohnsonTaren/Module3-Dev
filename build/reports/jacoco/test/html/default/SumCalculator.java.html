@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SumCalculator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Module3-Dev</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">SumCalculator.java</span></div><h1>SumCalculator.java</h1><pre class="source lang-java linenums"><span class="fc" id="L1">public class SumCalculator {</span>
+    /* Створи Gradle проєкт, у якому є клас SumCalculator, з методом
+    // int sum(int n). Цей метод має повертати суму чисел від 1 до n включно.
+    //
+    //Наприклад, виклик sum(3) має повернути 6 (1 + 2 + 3).
+    //
+    //Напиши тестовий клас для SumCalculator, де протестуй наступну
+    // поведінку методу sum() (кожний пункт списку - окремий тест):
+    //
+    //виклик sum(1) повертає 1
+    //виклик sum(3) повертає 6
+    //виклик sum(0) викидає виключення IllegalArgumentException
+    //Використай метод з анотацією @BeforeEach, щоб конструювати
+    // об'єкт класу SumCalculator перед кожним тестом.
+    //
+    //Переконайся, що твій код запускається з терміналу викликом
+    // команди gradle test.
+    //
+    //Результат виконання домашнього завдання - репозиторій на Github
+    // з вихідним кодом.
+    */
+
+    public int sumCalculate(int n) {
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        if (n == 0) {</span>
+<span class="fc" id="L25">            throw new IllegalArgumentException(&quot;Значення 'n' не може дорівнювати 0&quot;);</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">        } else if (n &lt; 0) {</span>
+<span class="fc" id="L27">            throw new IllegalArgumentException(&quot;Значення 'n' не може дорівнювати &quot; +</span>
+                    &quot;відємному значенню&quot;);
+        }
+<span class="fc" id="L30">        int sum = 0;</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        for (int i = 0; i &lt;= n; i++) {</span>
+<span class="fc" id="L32">            sum += i;</span>
+        }
+<span class="fc" id="L34">        return sum;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

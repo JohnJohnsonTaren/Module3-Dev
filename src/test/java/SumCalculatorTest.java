@@ -25,28 +25,18 @@ class SumCalculatorTest {
 
     @Test // вызов sum(0) возвращает 0
     public void testSumZero() {
-        Expression[] invalidInputs = {
-                new Expression(Expression.Operator.plus, 0)
-        };
-        for (Expression invalidInput: invalidInputs) {
-            Assertions.assertThrows(
-                    IllegalArgumentException.class,
-                    () -> sumCalculator.sumCalculate(invalidInput.getSum()),
-                    invalidInput + ""
-            );
-        }
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> sumCalculator.sumCalculate(0)
+        );
     }
+
 
     @Test // вызов sum(-1) выбрасывает исключение IllegalArgumentException
     public void testSumNegativeThrowsException() {
-        Expression[] invalidInputs = {new Expression(Expression.Operator.plus, -1)
-        };
-        for (Expression invalidInput: invalidInputs) {
-            Assertions.assertThrows(
-                    IllegalArgumentException.class,
-                    () -> sumCalculator.sumCalculate(invalidInput.getSum()),
-                    invalidInput + ""
-            );
-        }
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> sumCalculator.sumCalculate(-1)
+        );
     }
 }
